@@ -81,19 +81,28 @@ namespace VariableNaming
             10. Mrs. Hilt found a quarter, 1 dime, and 2 nickels. How much money did
             she find?
             */
-
+            double quarter = .25;
+            double dime = .10;
+            double nickel = .05;
+            double totalMoneyFound = quarter + dime + (nickel + nickel);
+            Console.WriteLine(totalMoneyFound);
             /*
             11. Mrs. Hilt's favorite first grade classes are baking muffins. Mrs. Brier's
             class bakes 18 muffins, Mrs. MacAdams's class bakes 20 muffins, and
             Mrs. Flannery's class bakes 17 muffins. How many muffins does first
             grade bake in all?
             */
-
+            int muffunsBakedInBrierClass = 18;
+            int muffinsBakedInMcadamsClass = 20;
+            int muffinsBakedInFlannerClass = 17;
+            int totalMuffinsBakedInFirstGrade = muffunsBakedInBrierClass + muffinsBakedInMcadamsClass + muffinsBakedInFlannerClass;
             /*
             12. Mrs. Hilt bought a yoyo for 24 cents and a whistle for 14 cents. How
             much did she spend in all for the two toys?
             */
-
+            double moneySpentOnYoyo = .24;
+            double moneySpentOnWhistle = .14;
+            double totalMoneySpentOnToys = moneySpentOnYoyo + moneySpentOnWhistle;
             /*
             13. Mrs. Hilt made 5 Rice Krispie Treats. She used 8 large marshmallows
             and 10 mini marshmallows.How many marshmallows did she use
