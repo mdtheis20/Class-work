@@ -32,36 +32,51 @@ namespace VariableNaming
             3. 3 raccoons are playing in the woods. 2 go home to eat dinner. How
             many raccoons are left in the woods?
             */
-
+            int initialNumberOfRaccoons = 3;
+            int raccoonsWhoWentHome = 2;
+            int raccoonsThatAreLeft = initialNumberOfRaccoons - raccoonsWhoWentHome;
+            Console.WriteLine(raccoonsThatAreLeft);
             /*
             4. There are 5 flowers and 3 bees. How many less bees than flowers?
             */
-
+            int numberOfFlowers = 5;
+            int numberOfBees = 3;
+            int numberOfExtraBees = numberOfFlowers - numberOfBees;
             /*
             5. 1 lonely pigeon was eating breadcrumbs. Another pigeon came to eat
             breadcrumbs, too. How many pigeons are eating breadcrumbs now?
             */
-
+            int origionalPigeon = 1;
+            int newPigeon = 1;
+            int currentNumberOfPigeons = origionalPigeon + newPigeon;
             /*
             6. 3 owls were sitting on the fence. 2 more owls joined them. How many
             owls are on the fence now?
             */
-
+            int origionalOwlsOnTheFence = 3;
+            int newOwlsWhoJoinedThem = 2;
+            int currentNumberOfOwlsOnTheFence = origionalOwlsOnTheFence + newOwlsWhoJoinedThem;
             /*
             7. 2 beavers were working on their home. 1 went for a swim. How many
             beavers are still working on their home?
             */
-
+            int beaversFirstWOrkingOnTheirHome = 2;
+            int beaversWhoWentForASwim = 1;
+            int beaversCurrentlyWorkingOnTheirHome = beaversFirstWOrkingOnTheirHome - beaversWhoWentForASwim;
             /*
             8. 2 toucans are sitting on a tree limb. 1 more toucan joins them. How
             many toucans in all?
             */
-
+            int origionalNumberOfTucansOnTreeLimb = 2;
+            int tucansWhoJoinedLater = 1;
+            int currentNumberOfTucansOnTreeLimb = origionalNumberOfTucansOnTreeLimb + tucansWhoJoinedLater;
             /*
             9. There are 4 squirrels in a tree with 2 nuts. How many more squirrels
             are there than nuts?
             */
-
+            int numberOfSquirrels = 4;
+            int numberOfNuts = 2;
+            int numberOfEXtraSquirrels = numberOfSquirrels - numberOfNuts;
             /*
             10. Mrs. Hilt found a quarter, 1 dime, and 2 nickels. How much money did
             she find?
