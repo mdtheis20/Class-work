@@ -148,7 +148,7 @@ namespace VariableNaming
             */
             int totalBallonsBradHas = 17;
             int ballonsThatAreRed = 8;
-            int ballonsThatAreRed = totalBallonsBradHas - ballonsThatAreRed;
+            int ballonsThatAreGreen = totalBallonsBradHas - ballonsThatAreRed;
             /*
             19. There are 38 books on the shelf. Marta put 10 more books on the shelf.
             How many books are on the shelf now?
@@ -166,7 +166,10 @@ namespace VariableNaming
             21. Mrs. Hilt bought an ice cream cone for 99 cents. How much would 2 ice
             cream cones cost?
             */
-
+            double dollarsAnIceCreamConeCosts = .99;
+            int numberOfIceCreamConesBought = 2;
+            double totalCostofIceCreamConesBought = (double)numberOfIceCreamConesBought * dollarsAnIceCreamConeCosts;
+            Console.WriteLine(totalCostofIceCreamConesBought);
             /*
             22. Mrs. Hilt wants to make a border around her garden. She needs 125
             rocks to complete the border. She has 64 rocks. How many more rocks
@@ -197,7 +200,7 @@ namespace VariableNaming
             */
             int minutesSpentShovelingInTheMorning = 90;
             int minutesSpentShovelingInTheAfternoon = 45;
-            int totalMinutesSpentShoveling = 135;
+            int totalMinutesSpentShoveling = minutesSpentShovelingInTheMorning + minutesSpentShovelingInTheAfternoon;
             /*
             26. Mrs. Hilt bought 6 hot dogs. Each hot dog cost 50 cents. How much
             money did she pay for all of the hot dogs?
@@ -207,7 +210,9 @@ namespace VariableNaming
             27. Mrs. Hilt has 50 cents. A pencil costs 7 cents. How many pencils can
             she buy with the money she has?
             */
-
+            int centsHiltHas = 50;
+            int centsAPencilCost = 7;
+            int numberOfPencilsHiltCanBuy = centsHiltHas / centsAPencilCost;
             /*
             28. Mrs. Hilt saw 33 butterflies. Some of the butterflies were red and others
             were orange. If 20 of the butterflies were orange, how many of them
