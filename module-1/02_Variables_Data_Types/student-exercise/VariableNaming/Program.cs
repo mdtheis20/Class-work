@@ -108,42 +108,60 @@ namespace VariableNaming
             and 10 mini marshmallows.How many marshmallows did she use
             altogether?
             */
-
+            int largeMarshmallows = 8;
+            int miniMarshmallows = 10;
+            int totalMarshmallowsused = largeMarshmallows + miniMarshmallows;
             /*
             14. At Mrs. Hilt's house, there was 29 inches of snow, and Brecknock
             Elementary School received 17 inches of snow. How much more snow
             did Mrs. Hilt's house have?
             */
-
+            int inchesOfSnowAtHiltsHouse = 29;
+            int inchesOfSnowAtBreckknockElementary = 17;
+            int extraInchesOfSnowAtHiltsHouse = inchesOfSnowAtHiltsHouse - inchesOfSnowAtBreckknockElementary;
             /*
             15. Mrs. Hilt has $10. She spends $3 on a toy truck and $2 on a pencil
             case. How much money does she have left?
             */
-
+            int dollarsHiltInitiallyHas = 10;
+            int dollarsSpentOnToyTruck = 3;
+            int dollarsSpentOnPencilCase = 2;
+            int dollarsHiltHasLeft = dollarsHiltInitiallyHas - (dollarsSpentOnToyTruck + dollarsSpentOnPencilCase);
+            Console.WriteLine(dollarsHiltHasLeft);
             /*
             16. Josh had 16 marbles in his collection. He lost 7 marbles. How many
             marbles does he have now?
             */
-
+            int initalMarblesInCollection = 16;
+            int marblesLost = 7;
+            int mablesLeftInCollection = initalMarblesInCollection - marblesLost;
             /*
             17. Megan has 19 seashells. How many more seashells does she need to
             find to have 25 seashells in her collection?
             */
-
+            int seashellsMeganHasNow = 19;
+            int totalSeashellsMeganWantsToHave = 25;
+            int seashellsMeganNeedsToFind = totalSeashellsMeganWantsToHave - seashellsMeganHasNow;
             /*
             18. Brad has 17 balloons. 8 balloons are red and the rest are green. How
             many green balloons does Brad have?
             */
-
+            int totalBallonsBradHas = 17;
+            int ballonsThatAreRed = 8;
+            int ballonsThatAreRed = totalBallonsBradHas - ballonsThatAreRed;
             /*
             19. There are 38 books on the shelf. Marta put 10 more books on the shelf.
             How many books are on the shelf now?
             */
-
+            int initialNumberOfBooksOnTheShelf = 38;
+            int numberOfBooksMartaAddedToTheShelf = 10;
+            int totalNumberOfBooksOnTHeShelfNow = initialNumberOfBooksOnTheShelf + numberOfBooksMartaAddedToTheShelf;
             /*
             20. A bee has 6 legs. How many legs do 8 bees have?
             */
-
+            int numberOfLegsOnABee = 6;
+            int totalNumberOfBees = 8;
+            int totalNumberOfBeeLegs = numberOfLegsOnABee * totalNumberOfBees;
             /*
             21. Mrs. Hilt bought an ice cream cone for 99 cents. How much would 2 ice
             cream cones cost?
@@ -154,23 +172,32 @@ namespace VariableNaming
             rocks to complete the border. She has 64 rocks. How many more rocks
             does she need to complete the border?
             */
+            int rocksNeededForBorder = 125;
+            int rocksHiltHasNow = 64;
+            int RocksHiltStillNeedsToCompleteBorder = rocksNeededForBorder - rocksHiltHasNow;
 
             /*
             23. Mrs. Hilt had 38 marbles. She lost 15 of them. How many marbles does
             she have left?
             */
-
+            int marblesHiltInitiallyHad = 38;
+            int marblesHiltLost = 15;
+            int marblesHiltHasLeft = marblesHiltInitiallyHad - marblesHiltLost;
             /*
             24. Mrs. Hilt and her sister drove to a concert 78 miles away. They drove 32
             miles and then stopped for gas. How many miles did they have left to drive?
             */
-
+            int totalMilesOfDrive = 78;
+            int milesDrivenWhenTheyStoppedForGas = 32;
+            int milesLeftInTheDrive = totalMilesOfDrive - milesDrivenWhenTheyStoppedForGas;
             /*
             25. Mrs. Hilt spent 1 hour and 30 minutes shoveling snow on Saturday
             morning and 45 minutes shoveling snow on Saturday afternoon. How
             much total time did she spend shoveling snow?
             */
-
+            int minutesSpentShovelingInTheMorning = 90;
+            int minutesSpentShovelingInTheAfternoon = 45;
+            int totalMinutesSpentShoveling = 135;
             /*
             26. Mrs. Hilt bought 6 hot dogs. Each hot dog cost 50 cents. How much
             money did she pay for all of the hot dogs?
