@@ -15,9 +15,16 @@ namespace Exercises
 	     SleepIn(true, false) → false
 	     SleepIn(false, true) → true
 	     */
-        public bool SleepIn(bool weekday, bool vacation)
+      public bool SleepIn(bool weekday, bool vacation)
         {
-            return false;
+            if (!weekday || vacation)
+            {
+                return true;
+            }
+            else // If they are not on Vacation or a weekend
+            {
+                return false;
+            }
         }
 
     }
