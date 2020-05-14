@@ -377,48 +377,60 @@ namespace VariableNaming
             tiny glass jars. If each jar is to contain six cookies each, how many
             cookies will not be placed in a jar?
             */
-
-            Console.WriteLine();
+            int totalNumberOfGingerbreadCookies = 47;
+            int numberOfCookiesPerJar = 6;
+            int extraCookiesNotInJar = totalNumberOfGingerbreadCookies % numberOfCookiesPerJar;
+            Console.WriteLine(extraCookiesNotInJar);
 
             /*
             41. She also prepared 59 croissants which she plans to give to her 8
             neighbors. If each neighbor received and equal number of croissants,
             how many will be left with Marian?
             */
-
-            Console.WriteLine();
+            int totalNumberOfCroissantsPrepared = 59;
+            int numberOfNeighbors = 8;
+            int croissantsMarianIsLeftWith = totalNumberOfCroissantsPrepared % numberOfNeighbors;
+            Console.WriteLine(croissantsMarianIsLeftWith);
 
             /*
             42. Marian also baked oatmeal cookies for her classmates. If she can
             place 12 cookies on a tray at a time, how many trays will she need to
             prepare 276 oatmeal cookies at a time?
             */
-
-            Console.WriteLine();
+            int numberOfCookiesMarianWantsToBake = 276;
+            int cookiesPerTray = 12;
+            int numberOfTraysNeeded = numberOfCookiesMarianWantsToBake / cookiesPerTray;
+            Console.WriteLine(numberOfTraysNeeded);
 
             /*
             43. Marian’s friends were coming over that afternoon so she made 480
             bite-sized pretzels. If one serving is equal to 12 pretzels, how many
             servings of bite-sized pretzels was Marian able to prepare?
             */
-
-            Console.WriteLine();
+            int totalNumberOfPretzels = 480;
+            int numberOfPretzelsInServing = 12;
+            int numberOfServingsPrepared = totalNumberOfPretzels / numberOfPretzelsInServing;
+            Console.WriteLine(numberOfServingsPrepared);
 
             /*
             44. Lastly, she baked 53 lemon cupcakes for the children living in the city
             orphanage. If two lemon cupcakes were left at home, how many
             boxes with 3 lemon cupcakes each were given away?
             */
-
-            Console.WriteLine();
+            int lemonCupcakesBaked = 53;
+            int cupcakesPerBox = 3;
+            int numberOfCupcakeBoxesGivenAway = lemonCupcakesBaked / cupcakesPerBox;
+            Console.WriteLine(numberOfCupcakeBoxesGivenAway);
 
             /*
             45. Susie's mom prepared 74 carrot sticks for breakfast. If the carrots
             were served equally to 12 people, how many carrot sticks were left
             uneaten?
             */
-
-            Console.WriteLine();
+            int totalNumberOfCarrotSticks = 74;
+            int numberOfPeopleServed = 12;
+            int numberOfUneatedCarrotSticks = totalNumberOfCarrotSticks % numberOfPeopleServed;
+            Console.WriteLine(numberOfUneatedCarrotSticks);
 
             /*
             46. Susie and her sister gathered all 98 of their teddy bears and placed
