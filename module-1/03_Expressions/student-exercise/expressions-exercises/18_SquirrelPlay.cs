@@ -18,8 +18,52 @@ namespace Exercises
         */
         public bool SquirrelPlay(int temp, bool isSummer)
         {
-            return false;
-        }
+            if (isSummer == true)
+            {
+                if ( temp >= 60 && temp <= 100)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                if ( temp >= 60 && temp <= 90)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+           
+        } 
 
     }
 }
+
+
+
+ //if (isWeekend == true)    Using these previous problems to help guide me
+ //           {
+ //               if (cigars >= 40)
+ //               {
+ //                   return true;
+ //               }
+ //           }
+ //           else
+ //           {
+ //               if (cigars >= 40 && cigars <= 60)
+ //               {
+ //                   return true;
+ //               }
+ //               else
+ //               {
+ //                   return false;
+ //               }
+ //           }
+ //           return false;
