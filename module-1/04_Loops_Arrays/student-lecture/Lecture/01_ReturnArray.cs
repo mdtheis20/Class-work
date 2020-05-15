@@ -17,19 +17,19 @@ namespace Lecture
         */
         public int[] ReturnNewArray()
         {
-            return null;
+            return new int[1];
         }
 
 
         /*
-        1b. This method expects an array of integers size 100 to be returned.
+        1b. This method expects an array of integers size 100 to be returned.ew
             Create an array of size 100 and return it.
 
             TOPIC: Array Creation
         */
         public int[] ReturnArrayOfKnownSize()
         {
-            return null;
+            return new int[100];
         }
 
         /*
@@ -40,7 +40,7 @@ namespace Lecture
         */
         public string[] ReturnArrayOfUnknownSize(int n)
         {
-            return null;
+            return new string[n];
         }
 
         

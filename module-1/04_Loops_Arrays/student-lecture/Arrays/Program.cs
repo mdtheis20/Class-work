@@ -6,9 +6,16 @@ namespace Arrays
     {
         static void Main(string[] args)
         {
-       
-            //1. Creating an array of integers
 
+            //1. Creating an array of integers
+            int[] quizScores = new int[4];
+            quizScores[0] = 100;
+            quizScores[1] = 80;
+            quizScores[2] = 85;
+            quizScores[3] = 90;
+            
+
+            Console.WriteLine($"The length of the array is {quizScores.Length}");
             //2. Creating an array of strings
 
             //3. Create an array of characters that hold "Tech Elevator"        

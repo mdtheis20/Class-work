@@ -17,7 +17,14 @@ namespace Exercises
         */
         public bool LoneTeen(int a, int b)
         {
-            return false;
+            if ((a <= 19 && a >= 13) ^ (b <= 19 && b >= 13))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
     }
