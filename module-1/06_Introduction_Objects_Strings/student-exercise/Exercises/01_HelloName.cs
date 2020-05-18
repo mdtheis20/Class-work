@@ -16,6 +16,7 @@ namespace Exercises
          */
         public string HelloName(string name)
         {
+            return $"Hello {name}!";
             return null;
         }
 

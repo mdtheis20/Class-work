@@ -16,9 +16,10 @@ namespace Exercises
          */
         public bool Has22(int[] nums)
         {
+            int a = 2;
             for (int i =0; i< nums.Length; i++)
             {
-                if ((nums[i] == 2) && (nums[i++] == 2))
+                if (nums[i] && nums[i++] == a)
                 {
                     return true;
                 }
