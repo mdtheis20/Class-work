@@ -17,7 +17,12 @@ namespace Exercises
          */
         public int[] RotateLeft3(int[] nums)
         {
-            return new int[] { };
+            {
+                int[] rotated = { nums[1], nums[2], nums[0] };
+                return rotated;
+            }
+
+            
         }
 
     }
