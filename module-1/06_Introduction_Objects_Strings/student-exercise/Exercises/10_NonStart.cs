@@ -17,7 +17,13 @@ namespace Exercises
          */
         public string NonStart(string a, string b)
         {
-            return null;
+            return a.Substring(1,a.Length - 1) + b.Substring(1,b.Length - 1);
         }
     }
 }
+
+
+
+//// 3. Now print out the first three and the last three characters
+//// Output: Adaace
+//Console.WriteLine($"First 3 + last 3: {name.Substring(0,3)} {name.Substring(name.Length -3, 3)} ");
