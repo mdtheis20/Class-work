@@ -17,9 +17,13 @@ namespace Exercises
         public int CountXX(string str)
         {
             int countOfXX = 0;
-            for (int i = 0; i < str.Length; i++)
+            if (str.Length <= 1)
             {
-                if (str[i] == 'x' && str[i++] == 'x')
+                return 0;
+            }
+            for (int i = 0; i <= str.Length; i++)
+            {
+                if (str.Substring(i, 2) == "xx")
                 {
                     countOfXX++;
                 }
