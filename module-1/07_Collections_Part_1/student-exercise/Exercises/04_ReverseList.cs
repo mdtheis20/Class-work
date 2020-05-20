@@ -18,8 +18,18 @@ namespace Exercises
          */
         public List<string> ReverseList(List<string> objectList)
         {
-            return null;
+           for (int i = 0; i < objectList.Count / 2; i++)
+            {
+                string temp = objectList[objectList.Count - 1 - i];
+                objectList[objectList.Count - 1 - i] = objectList[i];
+                objectList[i] = temp;
+            }
+
+            return objectList;
         }
 
     }
 }
+
+
+//object list.reverse 
