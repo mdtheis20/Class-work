@@ -17,18 +17,17 @@ namespace Exercises
         public int CountXX(string str)
         {
             int countOfXX = 0;
-            if (str.Length <= 1)
+
+            for (int i = 0; i < str.Length - 1; i++)
             {
-                return 0;
-            }
-            for (int i = 0; i <= str.Length; i++)
-            {
-                if (str.Substring(i, 2) == "xx")
+                if ((str[i] == 'x') && (str[i + 1] == 'x' ))
                 {
                     countOfXX++;
                 }
             }
+
             return countOfXX;
-        }
+          
+        }  
     }
 }
