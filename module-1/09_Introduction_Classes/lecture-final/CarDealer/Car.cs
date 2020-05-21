@@ -6,6 +6,15 @@ namespace CarDealer
 {
     public class Car
     {
+
+        // Create a constructor for Car that accepts a year, make and model
+        public Car(int year, string make, string model)
+        {
+            this.Year = year;
+            this.Make = make;
+            this.Model = model;
+        }
+
         public string VIN { get; set; }
 
         public string Make { get; set; }
@@ -46,6 +55,11 @@ namespace CarDealer
         public void Accelerate()
         {
             this.Speed++;
+        }
+
+        public void Accelerate(int mph)
+        {
+            this.Speed += mph;
         }
 
     }

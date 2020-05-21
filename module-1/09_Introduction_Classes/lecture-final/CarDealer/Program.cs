@@ -7,12 +7,12 @@ namespace CarDealer
         static void Main(string[] args)
         {
             // Create a new Car object (Create a new object of type Car)
-            Car dan = new Car();
+            Car dan = new Car(1965, "Ford", "Mustang");
 
-            // Set its make and model
-            dan.Make = "Ford";
-            dan.Model = "Mustang";
-            dan.Year = 1965;
+            //// Set its make and model
+            //dan.Make = "Ford";
+            //dan.Model = "Mustang";
+            //dan.Year = 1965;
 
             // Display the car property value
             string make = dan.Make;
@@ -30,6 +30,13 @@ namespace CarDealer
             while (dan.Speed < 60)
             {
                 dan.Accelerate();
+                Console.WriteLine($"The car is now going {dan.Speed} mph.");
+            }
+
+            // Now let's brake hard.
+            while (dan.Speed > 0)
+            {
+                dan.Accelerate(-5);
                 Console.WriteLine($"The car is now going {dan.Speed} mph.");
             }
         }
