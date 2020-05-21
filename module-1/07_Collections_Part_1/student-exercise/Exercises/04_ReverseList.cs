@@ -19,7 +19,8 @@ namespace Exercises
         public List<string> ReverseList(List<string> objectList)
         {
            for (int i = 0; i < objectList.Count / 2; i++)
-            {
+            {//swap element[i] with element[Count -1 -i]
+                //first hold onto the last element
                 string temp = objectList[objectList.Count - 1 - i];
                 objectList[objectList.Count - 1 - i] = objectList[i];
                 objectList[i] = temp;

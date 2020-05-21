@@ -18,7 +18,21 @@ namespace Exercises
          */
         public List<int> InterleaveLists(List<int> listOne, List<int> listTwo)
         {
-            return null;
+            int smallListLength = Math.Min(listOne.Count(), listTwo.Count());
+            List<int> newList = new List<int>();
+
+            for (int i = 0; i < smallListLength; i++)
+            {
+                newList.Add(listOne[i]);
+                newList.Add(listTwo[i]);
+            }
+
+            List<int> longList = (listOne.Count > listTwo.Count) ? listOne : listTwo;
+            List<int> subset = longList.GetRange(smallListLength, longList.Count - smallListLength);
+
+            newList.AddRange(subset);
+
+            return newList;
         }
     }
 }
