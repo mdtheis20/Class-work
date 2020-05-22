@@ -46,7 +46,35 @@ namespace DictionaryCollection
             List<string> stateNames = new List<string>() { "Alabama", "Alaska", "Arkansas", "Arizona", "California", "Colorado", 
                 "Connecticut", "Deleware" };
 
+            int IndexOf = stateCodes.IndexOf(stateCode);
+
+            if (IndexOf >= 0)
+            {
+                return stateNames[IndexOf];
+            }
+
+
             return null;
+        }
+
+
+        static string LookupStateWithDctionary(string stateCode)
+        {
+            Dictionary<string, string> stateCodes = new Dictionary<string, string>()
+            {
+                {"AL", "Alabama" },
+                {"AK", "Alaska" },
+                {"AR", "Arkansas" }
+            };
+
+            if (stateCodes.ContainsKey(stateCode))
+            {
+                return stateCodes[stateCode];
+            }
+            else
+            {
+                return null;
+            }
         }
         static void DictionaryDemo()
         {
