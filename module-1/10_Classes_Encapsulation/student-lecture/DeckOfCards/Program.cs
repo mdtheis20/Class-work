@@ -1,6 +1,7 @@
-﻿using System;
+﻿using DeckOfCards.Models;
+using System;
 using System.Collections.Generic;
-using DeckOfCards.Models;
+
 
 namespace DeckOfCards
 {
@@ -14,6 +15,24 @@ namespace DeckOfCards
 
             // TODO: Create a card game and start playing!
 
+
+            //Create a card
+            Card card = new Card(12, "H");
+
+            Console.WriteLine($"Card is a {card.ValueName} of {card.Suit}, its color is {card.Color}, and IsFaceUp equals {card.IsFaceUp}");
+
+            Deck deck = new Deck();
+
+
+            card = deck.DealOne();
+
+            while (card != null)
+            {
+                Console.WriteLine($"{card.ValueName} of {card.Suit}");
+                card = deck.DealOne();
+            }
+
+            
         }
 
         
