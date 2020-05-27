@@ -34,7 +34,7 @@ namespace DeckOfCards.Models
             }
             Card card = cards[0];
 
-            cards.RemoveAt(0);
+            cards.RemoveAt(0);new
 
             return card;
         }
@@ -47,7 +47,7 @@ namespace DeckOfCards.Models
                 //Get a random number from 0 - unshuffled.Count - 1
 
             //Copy that card to the end of suffled list. 
-            //Remove that card from the unshuffled list. 
+
         }
     }
 }

@@ -17,22 +17,21 @@ namespace Exercises
          */
         public List<string> No4LetterWords(string[] stringArray)
         {
-            
-                    List<string> words = new List<string>(stringArray);
-                  
-                    for (int i = 0; i < words.Count; i++)
-                    {
-                        if (words[i].Length == 4)
-                        {
-                            words.RemoveAt(i);
-                    i--;
-                        }
-                    }
 
-                    return words;
+            List<string> words = new List<string>(stringArray);
+
+            for (int i = 0; i < words.Count; i++)
+            {
+                if (words[i].Length == 4)
+                {
+                    words.RemoveAt(i);
                 }
             }
-        }
 
-    
+            return words;
+        }
+    }
+}
+
+
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Accounts.Models;
+using System;
 using System.Collections.Generic;
 
 /***
@@ -35,6 +36,15 @@ namespace Accounts
         /// <param name="args">Not used</param>
         static void Main(string[] args)
         {
+            BankAccount bankAccount = new BankAccount(500);
+            SavingsAccount savingsAccount = new SavingsAccount(100);
+            decimal newBalance = bankAccount.Deposit(500);
+            Console.WriteLine(newBalance);
+
+
+
+
+
             // TODO 04: Create a savings account and a checking account for the user, and pass those into
             // the ATM
 
