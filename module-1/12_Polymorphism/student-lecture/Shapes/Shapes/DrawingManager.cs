@@ -8,8 +8,8 @@ namespace Shapes
     class DrawingManager
     {
         #region Fields
-        // TODO 02 Update the shapes collection to hold IDrawable objects (we should rename it to)
-        List<Shape2D> shapes = new List<Shape2D>();
+        // TODO 02 Update the drawables collection to hold IDrawable objects (we should rename it to)
+        List<IDrawable> drawables = new List<IDrawable>();
         #endregion
 
         #region Methods
@@ -30,6 +30,7 @@ namespace Shapes
     3) Draw the Canvas
     4) List all Shapes
     5) Clear the Canvas
+    6) Add a Label
     Q) Quit
 
 Please choose an option: ");
@@ -68,6 +69,10 @@ Please choose an option: ");
                     ClearCanvas();
                 }
                 // TODO 06: Check for the selection to add a text label and call the NewText() method
+                else if (input == "6")
+                {
+                    NewText();
+                }
                 // TODO 08: Check for "Get total area" and call a method to calculate and report
                 else
                 {
@@ -78,25 +83,36 @@ Please choose an option: ");
             }
         }
 
+        private void NewText()
+        {
+            // prompt the user for text
+            Console.Write("Label Text: ");
+            string label = Console.ReadLine();
+            ConsoleColor color = GetColor("Label Color: ");
+            Text txt = new Text(label, color);
+            drawables.Add(txt);
+            Success("Text was created");
+        }
+
         /// <summary>
-        /// Clear all the shapes
+        /// Clear all the drawables
         /// </summary>
         private void ClearCanvas()
         {
-            shapes.Clear();
+            drawables.Clear();
             Success("Canvas was cleared");
         }
 
         /// <summary>
-        /// Show the user the list of shapes
+        /// Show the user the list of drawables
         /// </summary>
         private void ListDrawingObjects()
         {
             Success("Shapes:");
-            // TODO 04 We no longer draw shapes.  We draw "things that are drawable"
-            foreach (Shape2D shape in shapes)
+            // TODO 04 We no longer draw drawables.  We draw "things that are drawable"
+            foreach (IDrawable drawable in drawables)
             {
-                Success($"\t{shape}");
+                Success($"\t{drawable}");
             }
         }
 
@@ -109,7 +125,7 @@ Please choose an option: ");
             int height = GetPositiveInt("Height: ", 1, 30);
             ConsoleColor color = GetColor("Enter the shape color: ");
             bool filled = GetBool("Do you want the shape filled? ");
-            shapes.Add(new Rectangle(width, height, color, filled));
+            drawables.Add(new Rectangle(width, height, color, filled));
             Success("New Rectangle was added");
 
         }
@@ -122,7 +138,7 @@ Please choose an option: ");
             int radius = GetPositiveInt("Radius: ", 1, 15);
             ConsoleColor color = GetColor("Enter the shape color: ");
             bool filled = GetBool("Do you want the shape filled? ");
-            shapes.Add(new Circle(radius, color, filled));
+            drawables.Add(new Circle(radius, color, filled));
             Success("New Circle was added");
         }
 
@@ -138,12 +154,12 @@ Please choose an option: ");
         // TODO 08: Create method to "Get total area" and report it to the user
 
         /// <summary>
-        /// Draw all the shapes onto the canvas (Console)
+        /// Draw all the drawables onto the canvas (Console)
         /// </summary>
         public void DrawCanvas()
         {
-            // TODO 04 We no longer draw shapes.  We draw "things that are drawable"
-            foreach (Shape2D shape in shapes)
+            // TODO 04 We no longer draw drawables.  We draw "things that are drawable"
+            foreach (IDrawable drawable in drawables)
             {
                 shape.Draw();
             }

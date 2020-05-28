@@ -11,6 +11,7 @@ namespace TechElevator.Classes
     /// </summary>
     public class ShoppingCart
     {
+
         public int TotalNumberOfItems { get; private set; } = 0;
         
         public decimal TotalAmountOwed { get; private set; } = 0.0M;
