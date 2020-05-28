@@ -16,7 +16,7 @@ namespace Shapes.Models
     /// <summary>
     /// A two-dimensional shape that can be drawn on the screen
     /// </summary>
-    public class Shape2D : IDrawable
+    public abstract class Shape2D : IDrawable
     {
         #region Properties
         public bool IsFilled { get; set; }
@@ -40,13 +40,13 @@ namespace Shapes.Models
         #region Public Methods
 
         // This should be abstract later
-        virtual public void Draw() { }
+        abstract  public void Draw();
         
         // This should be abstract later
-        virtual public int Area { get { return 0; } }
+        abstract public int Area { get; }
 
         // This should be abstract later
-        virtual public int Perimeter { get { return 0; } }
+        abstract public int Perimeter { get;  }
 
         #endregion
 
