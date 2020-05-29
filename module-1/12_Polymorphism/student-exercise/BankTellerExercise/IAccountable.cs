@@ -8,4 +8,5 @@ namespace BankTellerExercise
     {
         int Balance { get; }
     }
+
 }

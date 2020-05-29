@@ -5,7 +5,7 @@
 
         public string AccountHolderName { get; private set; }
         public string AccountNumber { get; private set; }
-        public int Balance { get; private set; }
+        public int Balance { get; protected set; }
 
         public BankAccount(string accountHolder, string accountNumber)
         {
@@ -33,9 +33,10 @@
             return Balance;
         }
 
-        public int TransferTo(BankAccount destinationAccount, int trasferAmount)
+        public  int TransferTo(BankAccount destinationAccount, int trasferAmount)
         {
-            Balance += trasferAmount;
+            this.Withdraw(trasferAmount);
+            destinationAccount.Deposit(trasferAmount);
             return Balance;
 
         }
