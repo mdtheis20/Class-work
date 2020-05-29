@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BankTellerExercise
 {
-    interface IAccountable
+    public interface IAccountable
     {
         int Balance { get; }
     }

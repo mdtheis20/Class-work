@@ -16,7 +16,12 @@ namespace BankTellerExercise
         {
             get
             {
-                return false;
+                int toalBalance = 0;
+                foreach (IAccountable acct in this.accounts )
+                {
+                    toalBalance += acct.Balance;
+                }
+                return (toalBalance >= 25000);
             }
         }
 
@@ -24,6 +29,16 @@ namespace BankTellerExercise
         public void AddAccount(IAccountable account)
         {
             accounts.Add(account);
+        }
+
+        public IAccountable[] GetAccounts()
+        {
+            IAccountable[] accts = this.accounts.ToArray();
+            if (this.accounts[0] == accts[0])
+            {
+                Console.WriteLine("Same!");
+            }
+            return accts;
         }
     }
 }
