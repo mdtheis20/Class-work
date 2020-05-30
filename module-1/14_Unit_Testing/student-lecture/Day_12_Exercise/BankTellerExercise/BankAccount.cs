@@ -1,6 +1,6 @@
 ﻿namespace BankTellerExercise
 {
-    public class BankAccount : IAccountable
+    abstract public class BankAccount : IAccountable
     {
 
         public string AccountHolderName { get; private set; }
