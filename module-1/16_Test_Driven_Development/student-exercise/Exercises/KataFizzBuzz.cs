@@ -8,6 +8,9 @@ namespace Exercises
 {
     public class KataFizzBuzz
     {
-
+        public string FizzBuzz(int v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
