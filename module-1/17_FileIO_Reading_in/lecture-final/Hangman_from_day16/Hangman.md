@@ -1,0 +1,72 @@
+#### Requirements
+##### Hangman Game Play
+- When user starts game, a word to guess is determined.
+- User gets a clue as to the word, showing a dash for each character in the word.
+- User guesses a character, and the game responds with the number of hits
+- User can view the clue at any time, showing any guessed characters in their proper locations, dashes for characters not yet guessed.
+- User can always see what was previously guessed during this game
+- Users gets 10 chances to guess, after which the game has been lost.
+- User can determine whether the game has been won (all characters guessed) or lost (10 guesses without getting the word)
+##### Hangman Words
+- When a new word to solve is needed, one is conjured by the game
+  - the word should be random, unpredictable
+  - the word should be 5 - 8 characters long
+  - the word should be unique (not repeat) among many rounds during the game (say, 100)
+
+#### TDD Game
+- Create a Project / Solution. 
+  - Project name: Hangman, Solution: Hangman
+  - Create a Test project: Hangman.Tests
+- RED **Create a test** Create a HangmanGame class, passing in a word ("pizza").
+  - Get a clue from the game and assert it = "-----"
+- GREEN Pass the test by setting the Clue property to "-----".
+- RED write a DataTestMethod to pass in strings of differing lengths to the game and test the clue.
+- GREEN Write the appropriate code to create the Clue when the word is set
+---
+- REFACTOR 
+  - Should the setters for WordToSolve and Clue be public?
+  - The dash is a magic literal. What if the word we want has dashes in it? Make it into a constant so we can change it later if needed.
+---
+- RED **Create a test** to enter a guess and make sure that the response is correct.
+- GREEN Update code to pass back the number of times a character is found
+- GREEN? Use DataRow to test against 0 found, 1 found, multiple found
+- RED **Create a test** to check that Clue has been updated appropriately
+- GREEN Write code to update Clue
+- GREEN? Write DataRow to test Clue after 0, 1 or multiple hits
+---
+- REFACTOR Use **StringBuilder**
+---
+- RED **Create a test** to check the remaining number of guesses starts at 10.
+- GREEN Write the code to initialize remaining guesses
+- RED **Create a test** to check the remaining number of guesses updates after a guess.
+- GREEN Update remaining guesses
+---
+- REFACTOR 
+  - Replace the magic number 10, 9 with a Constant
+  - Should the setter for RemainingGuesses be public?
+---
+- RED **Create a test** to verify that Guesses property contains all the guesses for the game.
+- GREEN Update Guesses property to store guesses.
+---
+- REFACTOR Is the access of the new property correct?
+---
+- GREEN? **Create a test** to guess numerous times and get expected results
+- GREEN? **Create a test** to check the status of a game that has just started (HasWon - false), (HasLost = false)
+- RED **Create a test** to solve a puzzle and check if the game has been won.
+- GREEN Update HasWon once game has been solved
+- RED **Create a test** to guess 10 times without winning, and make sure HasLost is true.
+- GREEN Once remaining guesses hits 0, set HasLost to true.
+---
+- REFACTOR HasWon and HasLost into an enumeration called GameStatus (with InProgress)
+---
+
+#### TDD Dictionary
+- RED **Create a test** to get a random 5 - 8 character word from a HangmanDictionary.
+- GREEN Write code to return a 5 - 8 character word ("pizza")
+- RED **Create a test** to make sure the word is unique for the game (100 times)
+- GREEN Write code to read from file and track names given. Pick a random number, make sure the length fits and it has not been used.
+- REFACTOR Do we have to open file and read in the words each time?
+  - Refactor to open the file at the start of the game and read into a list
+  - Read from the list when a new word is requested
+- REFACTOR Do we need to read in all the words, or just the ones that are the right length?
+- REFACTOR If we remove the word from the list after handing it out, we don't need to check for duplicates any longer.
