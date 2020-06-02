@@ -26,6 +26,11 @@ namespace Exercises
                 return "Buzz";
             }
 
+            if (v < 1 || v > 100)
+            {
+                return "";
+            }
+
             return $"{v}";
         }
     }

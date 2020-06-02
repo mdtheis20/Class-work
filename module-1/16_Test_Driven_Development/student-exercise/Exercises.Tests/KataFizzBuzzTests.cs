@@ -60,7 +60,7 @@ namespace Exercises.Tests
 
             string result = fb.FizzBuzz(107);
 
-            Assert.AreEqual("22", result);
+            Assert.AreEqual("", result);
         }
 
     }
