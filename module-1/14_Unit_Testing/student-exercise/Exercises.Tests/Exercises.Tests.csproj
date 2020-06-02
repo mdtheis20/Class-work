@@ -16,4 +16,10 @@
     <ProjectReference Include="..\Exercises\Exercises.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="AnimalGroupNameTests.cs">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Compile>
+  </ItemGroup>
+
 </Project>
