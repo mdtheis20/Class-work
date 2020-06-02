@@ -52,5 +52,16 @@ namespace Exercises.Tests
             Assert.AreEqual("22", result);
         }
 
+        [TestMethod]
+        public void ReturnEmptyifNotBetween1and100()
+        {
+            //arrange
+            KataFizzBuzz fb = new KataFizzBuzz();
+
+            string result = fb.FizzBuzz(107);
+
+            Assert.AreEqual("22", result);
+        }
+
     }
 }
