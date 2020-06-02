@@ -20,5 +20,15 @@ namespace Exercises.Tests
 
             Assert.AreEqual("Fizz", result);
         }
+        [TestMethod]
+        public void ReturnFizzIfDivisibleBy5()
+        {
+            //arrange
+            KataFizzBuzz fb = new KataFizzBuzz();
+
+            string result = fb.FizzBuzz(5);
+
+            Assert.AreEqual("Buzz", result);
+        }
     }
 }
