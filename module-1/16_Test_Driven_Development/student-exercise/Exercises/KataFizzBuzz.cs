@@ -15,6 +15,11 @@ namespace Exercises
             {
                 return "Fizz";
             }
+            
+            if (v % 5 == 0)
+            {
+                return "Buzz";
+            }
             return $"{v}";
         }
     }
