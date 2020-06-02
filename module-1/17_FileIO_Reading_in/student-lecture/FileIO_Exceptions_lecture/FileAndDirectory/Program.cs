@@ -1,4 +1,4 @@
-﻿using FileAndDirectory.Classes;
+﻿using FileAndDirectory.Models;
 using System;
 using System.IO;
 
@@ -8,8 +8,18 @@ namespace FileAndDirectory
     {
         static void Main(string[] args)
         {
-            Navigator nav = new Navigator();
-            nav.Run();
+
+            // File 
+            FileAndDirDemo fdDemo = new FileAndDirDemo();
+            fdDemo.DoFileAndDirDemo();
+            Console.ReadLine();
+
+            // Path
+            Console.ReadLine();
+
+            //Navigator
+
+
 
             Console.Write("Now, wasn't that FUN???");
             Console.ReadLine();
