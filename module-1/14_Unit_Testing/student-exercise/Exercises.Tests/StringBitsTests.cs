@@ -9,16 +9,16 @@ namespace Exercises.Tests
    public class StringBitsTests
     {
         [TestMethod]
-        public void ReturnGroupNameToAnimalName()
+        public void ReturnStringOfBits()
         {
-            AnimalGroupName animal = new AnimalGroupName();
+            StringBits newString = new StringBits();
 
 
-            Assert.AreEqual(animal.GetHerd("rhino"), "Crash");
-            Assert.AreEqual(animal.GetHerd("RHino"), "Crash");
-            Assert.AreEqual(animal.GetHerd("giraffe"), "Tower");
-            Assert.AreEqual(animal.GetHerd("GIRaffe"), "Tower");
-            Assert.AreEqual(animal.GetHerd("crow"), "Murder");
+            Assert.AreEqual(newString.GetBits("Dope"), "Dp");
+            Assert.AreEqual(newString.GetBits("Cool"), "Co");
+            Assert.AreEqual(newString.GetBits("giraffe"), "grfe");
+            Assert.AreEqual(newString.GetBits("Tower"), "Twr");
+            Assert.AreEqual(newString.GetBits("Browns"), "Bon");
         }
     }
 }

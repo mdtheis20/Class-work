@@ -9,16 +9,13 @@ namespace Exercises.Tests
    public class WordCountTests
     {
         [TestMethod]
-        public void ReturnGroupNameToAnimalName()
+        public void ReturnANewDictionary()
         {
-            AnimalGroupName animal = new AnimalGroupName();
+            WordCount newArray = new WordCount();
+            Dictionary<string, int> output = new Dictionary<string, int>();
 
-
-            Assert.AreEqual(animal.GetHerd("rhino"), "Crash");
-            Assert.AreEqual(animal.GetHerd("RHino"), "Crash");
-            Assert.AreEqual(animal.GetHerd("giraffe"), "Tower");
-            Assert.AreEqual(animal.GetHerd("GIRaffe"), "Tower");
-            Assert.AreEqual(animal.GetHerd("crow"), "Murder");
+            CollectionAssert.AreEqual(newArray.GetCount(new string[] { "ba", "ba", "black", "sheep" }),output{ { "ba" , 2},  "black": 1, "sheep": 1 }
+        
         }
     }
 }

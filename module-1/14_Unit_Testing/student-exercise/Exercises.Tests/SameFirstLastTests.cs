@@ -9,16 +9,15 @@ namespace Exercises.Tests
     public class SameFirstLastTests
     {
         [TestMethod]
-        public void ReturnGroupNameToAnimalName()
+        public void AreTheFirstAndLastIntsEqual()
         {
-            AnimalGroupName animal = new AnimalGroupName();
+            SameFirstLast intArray = new SameFirstLast();
 
 
-            Assert.AreEqual(animal.GetHerd("rhino"), "Crash");
-            Assert.AreEqual(animal.GetHerd("RHino"), "Crash");
-            Assert.AreEqual(animal.GetHerd("giraffe"), "Tower");
-            Assert.AreEqual(animal.GetHerd("GIRaffe"), "Tower");
-            Assert.AreEqual(animal.GetHerd("crow"), "Murder");
+            Assert.AreEqual(intArray.IsItTheSame(new int[] { 1, 2, 3 }), false);
+            Assert.AreEqual(intArray.IsItTheSame(new int[] { 1, 2, 1 }), true);
+            Assert.AreEqual(intArray.IsItTheSame(new int[] { 1, 2, 3, 2, 1 }), true);
+            Assert.AreEqual(intArray.IsItTheSame(new int[] { 1, 2, 3, 4, 1, 2 }), false);
         }
     }
 }
