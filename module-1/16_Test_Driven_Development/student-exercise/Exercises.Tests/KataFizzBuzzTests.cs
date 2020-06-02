@@ -30,7 +30,7 @@ namespace Exercises.Tests
 
             Assert.AreEqual("Buzz", result);
         }
-
+        [TestMethod]
         public void ReturnFizzIfDivisibleBy3And5()
         {
             //arrange
@@ -40,5 +40,17 @@ namespace Exercises.Tests
 
             Assert.AreEqual("FizzBuzz", result);
         }
+
+        [TestMethod]
+        public void ReturnStringIfBetween1And100AndNotDivisibleBy3Or5()
+        {
+            //arrange
+            KataFizzBuzz fb = new KataFizzBuzz();
+
+            string result = fb.FizzBuzz(22);
+
+            Assert.AreEqual("22", result);
+        }
+
     }
 }
