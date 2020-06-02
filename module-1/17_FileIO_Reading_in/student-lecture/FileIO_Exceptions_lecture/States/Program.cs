@@ -42,13 +42,11 @@ namespace States
         private static void LoadStateDictionary()
         {
             // TODO 22: Replace this hard-coded data with a call to the StateFileLoader.
-
+            string path = @"C:\Users\Student\git\matttheis-c\module-1\17_FileIO_Reading_in\student-lecture\FileIO_Exceptions_lecture\States\States.txt";
+            StateFileLoader loader = new StateFileLoader(path);
+            
             stateCodes = new StateDictionary(
-                new List<State>()
-                {
-                    new State("OH", "Ohio", "Cleveland", "Timberlake"),
-                    new State("FL", "Florida", "Disney World", "Shady Oaks Retirement Community")
-                }
+              loader.StateList
             );
         }
 
