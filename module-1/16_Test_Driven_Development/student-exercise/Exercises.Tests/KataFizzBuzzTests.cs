@@ -30,5 +30,15 @@ namespace Exercises.Tests
 
             Assert.AreEqual("Buzz", result);
         }
+
+        public void ReturnFizzIfDivisibleBy3And5()
+        {
+            //arrange
+            KataFizzBuzz fb = new KataFizzBuzz();
+
+            string result = fb.FizzBuzz(15);
+
+            Assert.AreEqual("FizzBuzz", result);
+        }
     }
 }
