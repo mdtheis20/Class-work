@@ -86,5 +86,16 @@ namespace Exercises.Tests
             Assert.AreEqual("Buzz", result);
         }
 
+        [TestMethod]
+        public void ReturnFizzIfDivisibleBy3And5OrContains3And5()
+        {
+            //arrange
+            KataFizzBuzz fb = new KataFizzBuzz();
+
+            string result = fb.FizzBuzz(53);
+
+            Assert.AreEqual("FizzBuzz", result);
+        }
+
     }
 }
