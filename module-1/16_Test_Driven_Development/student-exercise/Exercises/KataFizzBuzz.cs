@@ -11,13 +11,15 @@ namespace Exercises
         
         public string FizzBuzz(int v)
         {
+            string newString = Convert.ToString(v);
+            
 
             if (v % 3 == 0 && v % 5 == 0)
             {
                 return "FizzBuzz";
             }
 
-            if (v % 3 == 0)
+            if (v % 3 == 0 || newString.Contains("3"))
             {
                 
                 
