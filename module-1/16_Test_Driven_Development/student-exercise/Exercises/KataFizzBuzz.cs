@@ -14,7 +14,7 @@ namespace Exercises
             string newString = Convert.ToString(v);
             
 
-            if (v % 3 == 0 && v % 5 == 0)
+            if (v % 3 == 0 && v % 5 == 0 || newString.Contains("3") && newString.Contains("5"))
             {
                 return "FizzBuzz";
             }
