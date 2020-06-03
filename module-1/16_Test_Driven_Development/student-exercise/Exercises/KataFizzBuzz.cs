@@ -26,7 +26,7 @@ namespace Exercises
                 return "Fizz";
             }
             
-            if (v % 5 == 0)
+            if (v % 5 == 0 || newString.Contains("5"))
             {
                 return "Buzz";
             }
