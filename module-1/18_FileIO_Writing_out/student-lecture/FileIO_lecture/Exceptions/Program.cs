@@ -12,6 +12,24 @@ namespace Exceptions
             * try/catch blocks will also catch Exceptions that are 
             * thrown from method called further down the stack 
             */
+            try
+            {
+                Console.WriteLine("Hey guys, watch this!");
+
+                int result = DoSomethingDangerous(10, 2);
+                Console.WriteLine($"See, I told you nothing would go wrong! the answer is {result}.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Sorry user, something went wrong, there error was '{ex.Message}'");
+            }
+            finally
+            {
+                Console.WriteLine("Finally block ran.");
+            }
+            
+            
+            
             #endregion
 
             #region DoMathFun

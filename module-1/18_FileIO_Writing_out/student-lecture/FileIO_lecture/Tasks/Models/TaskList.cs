@@ -33,13 +33,39 @@ namespace Tasks.Models
         {
             this.taskList = new List<Task>();
 
-            // TODO: Load tasks from the file (in Path), parse and create Tasks, add them to the list
 
+            if (!File.Exists(Path))
+            {
+                return;
+            }
+
+            // TODO: Load tasks from the file (in Path), parse and create Tasks, add them to the list
+            using (StreamReader sr = new StreamReader(Path))
+
+            {
+                while (!sr.EndOfStream)
+                {
+                    string s = sr.ReadLine();
+                    string[] fields = s.Split("|");
+                    string taskName = fields[0];
+                    DateTime dueDate = DateTime.Parse(fields[1]);
+                    bool isComplete = bool.Parse(fields[2]);
+                    Task task = new Task(taskName, dueDate, isComplete);
+                    taskList.Add(task);
+                }
+            }
         }
 
         public void Save()
         {
             // Open the file at Path, and write all the tasks there
+            using (StreamWriter sw = new StreamWriter(Path, false))
+            {
+                foreach (Task task in taskList)
+                {
+                    sw.WriteLine(string.Join("|", task.TaskName, task.DueDate, task.Completed) );
+                }
+            }
         }
 
         public void AddTask(Task newTask)
