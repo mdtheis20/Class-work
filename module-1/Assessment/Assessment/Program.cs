@@ -15,7 +15,7 @@ namespace Assessment
 
             decimal total = reservation.FinalTotal(true, true, 5);
 
-            Console.WriteLine($");
+            Console.WriteLine($"");
 
 
             
