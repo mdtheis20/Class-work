@@ -6,11 +6,11 @@ namespace TempConvert
     {
         static void Main(string[] args)
         {
-            Console.Write("Please enter the temperature: ");
+            Console.WriteLine("Please enter the temperature: ");
             string tempString = Console.ReadLine();
             int temp = Int32.Parse(tempString);
 
-            Console.Write("Is the temperature in (C)elsius, or(F)ahrenheit ? ");
+            Console.WriteLine("Is the temperature in (C)elsius, or(F)ahrenheit ? ");
             string cOrF = Console.ReadLine();
 
             if (cOrF == "C")

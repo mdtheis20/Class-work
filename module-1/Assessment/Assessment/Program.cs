@@ -1,4 +1,8 @@
-﻿using System;
+﻿using Assessment.Models;
+using System;
+using System.Collections.Generic;
+using System.Text;
+
 
 namespace Assessment
 {
@@ -7,8 +11,10 @@ namespace Assessment
         static void Main(string[] args)
         {
             // TODO: Create instances of your object here and call methods.
-
-            Console.ReadLine();
+            HotelReservation reservation = new HotelReservation("Matt Theis", 4);
+            
+                
+                Console.ReadLine();
         }
     }
 }

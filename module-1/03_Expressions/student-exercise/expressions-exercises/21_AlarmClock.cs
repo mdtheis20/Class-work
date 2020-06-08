@@ -22,7 +22,7 @@ namespace Exercises
         {
             if (vacation == true)
             {
-                if ((day == 1) || (day == 2) || (day == 3) || (day == 4) || (day == 5))
+                if (day >= 1 && day <= 5 )
                 {
                     return "10:00";
                 }

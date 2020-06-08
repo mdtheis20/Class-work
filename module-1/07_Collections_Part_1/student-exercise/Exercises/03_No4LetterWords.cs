@@ -20,12 +20,12 @@ namespace Exercises
 
             List<string> words = new List<string>(stringArray);
 
-            for (int i = 0; i < words.Count; i++)
+            foreach (string word in stringArray)
             {
-                if (words[i].Length == 4)
+                if (word.Length == 4)
                 {
-                    words.RemoveAt(i);
-                }
+                    words.Remove(word)
+;                }
             }
 
             return words;
