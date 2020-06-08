@@ -12,7 +12,7 @@ namespace Assessment.Tests
 
             HotelReservation reservation = new HotelReservation();
 
-            Assert.AreEqual(reservation.FinalTotal(true, true, 5) 360.92M);
+            Assert.AreEqual(reservation.FinalTotal(true, true, 5), 360.92M);
 
         }
     }
