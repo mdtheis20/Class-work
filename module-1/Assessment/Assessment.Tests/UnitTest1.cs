@@ -1,13 +1,19 @@
+using Assessment.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Assessment.Tests
 {
     [TestClass]
-    public class UnitTest1
+    public class HotelReservationTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void ReturnFinalTotal()
         {
+
+            HotelReservation reservation = new HotelReservation();
+
+            Assert.AreEqual(reservation.FinalTotal(true, true, 5) 360.92M);
+
         }
     }
 }
