@@ -89,7 +89,7 @@ select name
 -- 20. The name, continent, GNP, and average life expectancy of all countries that have an average life expectancy of at least 70 years and a GNP between $1 million and $100 million dollars (3 rows)
 select name, continent, gnp, lifeexpectancy
 	from country
-	where lifeexpectancy > 70 and gnp between 1 and 100
+	where lifeexpectancy >= 70 and gnp between 1 and 100
 -- 21. The per capita GNP (i.e. GNP divided by population) in US Dollars of all countries in Europe (46 rows)
 select gnp/population As'Per Capita GNP'
 	from country
