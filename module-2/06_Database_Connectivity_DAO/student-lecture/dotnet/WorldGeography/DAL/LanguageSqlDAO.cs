@@ -33,7 +33,27 @@ namespace WorldGeography.DAL
 
         public bool RemoveLanguage(Language deadLanguage)
         {
-            throw new NotImplementedException();
+            try
+            {
+                using(SqlConnection sqlConnection = new SqlConnection(connectionString))
+                {
+                    sqlConnection.Open();
+                    SqlCommand sqlCommand = new SqlCommand("Delete From countrylanguage where countryCode = @countryCode And language = @language", sqlConnection);
+                    sqlCommand.Parameters.AddWithValue("@countryCode", deadLanguage.CountryCode);
+                    sqlCommand.Parameters.AddWithValue("@language", deadLanguage.Name);
+
+                    sqlCommand.ExecuteNonQuery();
+
+                }
+
+            }
+            catch(SqlException ex)
+            {
+                Console.WriteLine("An error occured whole removing a language.");
+                Console.WriteLine(ex.Message);
+                throw;
+            }
+            return true;
         }
     }
 }

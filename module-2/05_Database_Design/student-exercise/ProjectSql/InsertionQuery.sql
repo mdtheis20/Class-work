@@ -1,4 +1,6 @@
 
+select * from employee 
+
 Select * from Employee Where Dept_Name = 'Water'
 Select * from Employee Where Dept_Name = 'Trash'
 Select * from Employee Where Dept_Name = 'Fire'
@@ -26,7 +28,7 @@ Insert into Employee_Project (EmployeeID, ProjectID)
 
 
 Insert into Project (Name, StartDate)
-	Values ('Clean Water', 9-9-99), ('Collect Garbage', 9-9-99), ('Wash Trucks', 9-9-99), ('Test for Covid', 9-9-99)
+	Values ('Clean Water', '2020-02-15'), ('Collect Garbage', '2020-03-15'), ('Wash Trucks','2020-01-15'), ('Test for Covid', '2020-02-15')
 
 
 
@@ -37,4 +39,4 @@ Insert into Department (Name)
 
 
 Insert into Employee (Last_Name, First_Name, Gender, DateOfBirth, DateOfHire, Dept_Name)
-	Values ('Bob', 'Miller', 'Male', 09/09/1991, 10/10/2010, 'Water'), ('Susan', 'Soft', 'Female', 09/11/1989, 10/14/2011, 'Water'), ('Tom', 'Tucker', 'Male', 07/07/1973, 10/10/1994, 'Trash'), ('Tracy', 'Times', 'Female', 07/24/1978, 10/10/1998, 'Trash'), ('Dale', 'Downer', 'Male', 08/08/1988, 10/10/2018, 'Fire'), ('Debby', 'Downer', 'Female', 06/14/1988, 10/10/2016, 'Fire'), ('Jerry', 'Jones', 'Male', 05/08/1963, 10/10/2001, 'Health'), ('Judy', 'Baker', 'Female', 05/17/1983, 03/10/2001, 'Health')
+	Values ('Bob', 'Miller', 'Male','1972-06-15', '1999-07-15', 'Water'), ('Susan', 'Soft', 'Female', '1989-04-16', '2008-08-15', 'Water'), ('Tom', 'Tucker', 'Male', '1965-09-09', '2003-09-15', 'Trash'), ('Tracy', 'Times', 'Female', '1992-10-17', '2011-02-15', 'Trash'), ('Dale', 'Downer', 'Male', '1970-03-06', '2014-05-15', 'Fire'), ('Debby', 'Downer', 'Female', '1984-05-20', '2000-07-15', 'Fire'), ('Jerry', 'Jones', 'Male', '1977-06-19', '2013-10-15', 'Health'), ('Judy', 'Baker', 'Female', '1985-04-12', '2018-09-15', 'Health')
