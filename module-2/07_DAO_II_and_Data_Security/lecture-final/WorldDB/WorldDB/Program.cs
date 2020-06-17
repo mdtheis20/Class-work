@@ -14,7 +14,7 @@ namespace WorldDB
             // This code reads the connection string from appsettings.json
             IConfigurationBuilder builder = new ConfigurationBuilder();
             builder.AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
-                        IConfigurationRoot configuration = builder.Build();
+            IConfigurationRoot configuration = builder.Build();
             string connectionString = configuration.GetConnectionString("World");
 
             // TODO 00: Create a Model for Country to go with the City model we already have
