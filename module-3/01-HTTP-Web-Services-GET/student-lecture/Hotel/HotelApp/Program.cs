@@ -42,7 +42,8 @@ namespace HTTP_Web_Services_GET_lecture
                 }
                 else if (menuSelection == 1)
                 {
-                    Console.WriteLine("Not implemented");
+                    List<Hotel> hotels = GetHotels();
+                    PrintHotels(hotels);
                 }
                 else if (menuSelection == 2)
                 {
@@ -65,7 +66,12 @@ namespace HTTP_Web_Services_GET_lecture
 
 
         //API methods:
-
+        private static List<Hotel> GetHotels()
+        {
+            RestRequest request = new RestRequest(API_URL + "hotels");
+            IRestResponse<List<Hotel>> response = client.Get<List<Hotel>>(request);
+            return response.Data;
+        }
 
 
 

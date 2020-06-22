@@ -12,7 +12,8 @@ namespace DatabaseAccess
     {
         static void Main(string[] args)
         {
-            DataAccess data = new DataAccess();
+            CitySqlDAO data = new CitySqlDAO(@"Server=.\SqlExpress; Database=World; Trusted_Connection=True");
+
             // Execute a Select using a SQL Connection, Command and ExecuteReader.
 
             /*****************************************************************************/
@@ -42,16 +43,24 @@ namespace DatabaseAccess
 
             /*****************************************************************************/
             // Execute an Update using ExecuteNonQuery
-            data.UpdateUSPresident("Donald J Trump");
+            data.UpdatePopulation("Cleveland", 100);
 
 
             /*****************************************************************************/
             // Execute an Insert using ExecuteScalar
-            City newCity = new City();
+            City newCity = new City()
+            {
+                Name = "Joe City",
+                CountryCode = "USA",
+                District = "Ohio",
+                Population = 1
+            };
 
             // TODO 06: Fill in the data here
 
-            data.AddCity(newCity);
+            int newCityId = data.AddCity(newCity);
+
+            Console.WriteLine($"{newCity.Name} was added as city id {newCityId}!");
 
             // TODO 07: Get the Id of the new city
 
