@@ -44,10 +44,11 @@
     },
     {
       "Id": 7,
-      "title": "Molex Gold Watch",
-      "description": "Definitely not fake gold watch",
-      "user": "Stuart27",
-      "currentBid": 188.39
+      "Title": "billy bob",
+      "Description": "it is totally fake",
+      "User": "billy27",
+      "CurrentBid": 98.07,
+      "IsValid": true
     }
   ]
 }

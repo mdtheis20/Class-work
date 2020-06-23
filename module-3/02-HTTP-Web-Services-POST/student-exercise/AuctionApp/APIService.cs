@@ -95,21 +95,53 @@ namespace AuctionApp
             return null;
         }
 
-        public Auction AddAuction(Auction newAuction) {
+        public Auction AddAuction(Auction newAuction) 
+        {
             // place code here
-            throw new NotImplementedException();
+
+            RestRequest request = new RestRequest(API_URL);
+            request.AddJsonBody(newAuction);
+            IRestResponse<Auction> response = client.Post<Auction>(request);
+
+            return response.Data;
+            
         }
 
         public Auction UpdateAuction(Auction auctionToUpdate)
         {
             // place code here
-            throw new NotImplementedException();
+            RestRequest request = new RestRequest(API_URL + "/" + auctionToUpdate.Id);
+            request.AddJsonBody(auctionToUpdate);
+            IRestResponse<Auction> response = client.Put<Auction>(request);
+
+            return response.Data;
         }
 
         public bool DeleteAuction(int auctionId)
         {
             // place code here
-            throw new NotImplementedException();
+            RestRequest request = new RestRequest(API_URL + "/" +  auctionId);
+            IRestResponse response = client.Delete(request);
+            if (response.ResponseStatus != ResponseStatus.Completed)
+            {
+                return false;
+            }
+            else if (!response.IsSuccessful)
+            {
+                return false;
+            }
+            return true;
+            
         }
     }
 }
+
+
+
+//public Location AddLocation(Location newLocation)
+//{
+//    RestRequest request = new RestRequest(API_URL);
+//    request.AddJsonBody(newLocation);
+//    IRestResponse<Location> response = client.Post<Location>(request);
+//    return response.Data;
+//}
