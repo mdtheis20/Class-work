@@ -21,7 +21,8 @@ namespace HotelReservations.Controllers
         [HttpGet("hotels")]
         public List<Hotel> ListHotels()
         {
-            return _hotelDao.List();
+            List<Hotel> result =  _hotelDao.List();
+            return result;
         }
 
         [HttpGet("hotels/{id}")]
@@ -36,6 +37,27 @@ namespace HotelReservations.Controllers
 
             return null;
         }
+
+        [HttpGet("hotels/{hotelId}/reservations")]
+        public List<Reservation> GetReservationsByHotel(int hotelId)
+        {
+           return _reservationDao.FindByHotel(hotelId);
+
+        }
+
+        [HttpPost("reservations")]
+        public Reservation AddReservation(Reservation newRes)
+        {
+            return _reservationDao.Create(newRes);
+        }
+
+
+        //[HttpPut("reservations/{resId}")]
+        //public Reservation UpdateReservation(int resId, Reservation res)
+        //{
+        //    _
+        //}
+
 
 
 
