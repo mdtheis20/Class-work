@@ -47,12 +47,12 @@ namespace Locations.Controllers
         [HttpPost]
         public Location Add(Location location)
         {
-            if (location != null)
-            {
+            
+            
                 Location returnLocation = _dao.Create(location);
                 return returnLocation;
-            }
-            return null;
+            
+            
         }
 
 

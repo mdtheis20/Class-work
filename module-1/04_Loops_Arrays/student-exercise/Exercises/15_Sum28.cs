@@ -19,12 +19,18 @@ namespace Exercises
             int sum = 0;
             for (int i = 0; i < nums.Length; i++)
             { 
-                if ((sum += nums[i]) == 8);
+                if (nums[i] ==  2)
                 {
-                    return true;
+                    sum++;
                 }
+
             }
-            return false;
+            if (sum != 4)
+            {
+                return false;
+            }
+            return true;
+            
         }
 
     }
