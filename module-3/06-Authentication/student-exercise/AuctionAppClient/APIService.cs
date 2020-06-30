@@ -166,7 +166,7 @@ namespace AuctionApp
         public API_User Login(string submittedName, string submittedPass)
         {
             var credentials = new { username = submittedName, password = submittedPass };
-            RestRequest request = new RestRequest(AUCTIONS_URL + "login");
+            RestRequest request = new RestRequest(API_BASE_URL + "login");
             request.AddJsonBody(credentials);
             IRestResponse<API_User> response = client.Post<API_User>(request);
 
