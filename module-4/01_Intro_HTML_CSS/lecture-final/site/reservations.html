@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bit & Bytes Reservations</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+    <header>
+        <h1>Bits & Bytes</h1>
+        <p>Welcome to the Internet's best restaurant</p>
+    </header>
+    <nav>
+        <a href="index.html">View the menu</a>
+    </nav>
+
+    <main>
+        <h2>Make a Reservation</h2>
+        <form action="/api/reservation" method="GET">
+
+            <div>
+                <label for="guestName">Name: </label>
+                <input type="text" required name="guestName" id="guestName" />
+            </div>
+            <div>
+                <label for="numberGuests">Number of Guests: </label>
+                <input type="number" max="10" min="1" name="numberGuests" id="numberGuests" />
+            </div>
+            <div>
+                <label for="date">Date: </label>
+                <input type="date" min="2020/07/07" name="date" id="date" />
+            </div>
+            <div>
+                <label for="time">Time: </label>
+                <input type="time" id="time" name="time" />
+            </div>
+
+            <div>
+                <label for="occasion">Special Occasion? </label>
+                <input type="checkbox" id="occasion" name="occasion" />
+            </div>
+            <div>
+                <label for="color">Tablecloth Color: </label>
+                <input type="color" id="color" name="color" />
+            </div>
+
+            <input type="submit" value="Go!" />
+        </form>
+
+    </main>
+    <footer>
+        &copy; Copyright 2020 Bits & Bytes
+    </footer>
+</body>
+
+</html>
