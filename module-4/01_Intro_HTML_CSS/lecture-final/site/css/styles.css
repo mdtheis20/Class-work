@@ -1,0 +1,15 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: blue;
+    /* background-color: gray; */
+    /* background-color: rgb(128, 128, 128); */
+    background-color: #99c49b62;
+}
+img {
+    display: block;
+    margin: auto;
+    height: 200px;
+}
