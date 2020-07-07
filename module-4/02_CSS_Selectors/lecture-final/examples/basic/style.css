@@ -1,0 +1,35 @@
+body {
+    background-color: lightblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: red;
+}
+
+.special {
+    border: 3px solid green;
+    background-color: beige;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px grey;
+}
+
+#html-elements {
+    list-style: square;
+}
+
+
+#html-semantic-elements > li {
+    margin-top: 25px;
+}
+
+#blaze {
+    max-width: 300px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#blaze:hover {
+    filter: grayscale(50%) blur(1px);
+}
