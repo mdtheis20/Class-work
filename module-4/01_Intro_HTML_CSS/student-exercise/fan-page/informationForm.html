@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <main>
+        <h2>Enter Your Information</h2>
+        <form action="/api/information" method="GET">
+
+            <div>
+                <label for="Name">Name: </label>
+                <input type="text" required name="Name" id="Name" />
+            </div>
+            <div>
+                <label for="email">Email: </label>
+                <input type="text" required name="email" id="email" />
+            </div>
+            <div>
+                <label for="date">Date of birth: </label>
+                <input type="date" name="date" id="date" />
+            </div>
+            <div>
+                <label for="color">Favorite color: </label>
+                <input type="color" id="color" name="color" />
+            </div>
+            <div>
+                <label for="number">Favorite number: </label>
+                <input type="number" id="number" name="time" />
+            </div>
+
+            <div>
+                <label for="correct">Confirm data is correct: </label>
+                <input type="checkbox" id="correct" name="correct" />
+            </div>
+
+
+            <input type="submit" value="Submit" />
+        </form>
+
+    </main>
+    <nav>
+        <a href="index.html">Ron Swanson Baby!</a>
+    </nav>
+</body>
+</html>
