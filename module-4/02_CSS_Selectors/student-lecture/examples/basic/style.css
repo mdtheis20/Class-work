@@ -1,0 +1,15 @@
+body {
+    background-color: lightblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+    color: red;
+}
+
+.special {
+    border: 3px solid green;
+    background-color: beige;
+    padding: 3px 30px 10px 5px; 
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px grey;
+}
