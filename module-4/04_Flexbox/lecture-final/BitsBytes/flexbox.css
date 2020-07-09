@@ -1,0 +1,56 @@
+/** Style the page banner "footer" section **/
+
+#hero > footer {
+    /*Make it a flexbox */
+    display: flex;
+
+    /* Move items apart with justify */
+    justify-content: space-between;
+
+    /* center them vertically */
+    align-items: center;
+}
+
+/** Style the Featured items section **/
+#featured > section {
+    display: flex;
+}
+
+#featured > section > article > div {
+    /* display: flex;
+    justify-content: center; */
+    text-align: center;
+}
+
+/** Style the All Items section **/
+/* #all-items > section {
+    display: flex;
+    flex-direction: column;
+} */
+#all-items > section > article {
+    display: flex;
+}
+
+/* #all-items > section > article:nth-child(even) {
+    flex-direction: row-reverse;
+} */
+
+#all-items > section > article:nth-child(even) > div:first-child {
+    order: 1;
+}
+
+/** Be responsive to smaller screens **/
+@media screen and (max-width: 1024px) {
+    #featured > section {
+        flex-direction: column;
+    }
+
+    #featured section article:nth-child(even) {
+        border: none;
+    }
+
+    section, #hero, #hero img {
+        width: 98vw;
+    }
+
+}
