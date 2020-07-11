@@ -3,9 +3,18 @@ body {
   padding: 0;
   font-family: 'Oswald', sans-serif;
   font-size: 2.5em;
+  display: flex;
+  flex-direction: column;
 }
 
 .container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* width: 250px; */
+  justify-content: flex-start;
+  text-align: center;
+  align-content: flex-start;
   background-color: #F0F0F0;
   height: 500px;
 }

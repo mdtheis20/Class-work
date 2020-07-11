@@ -6,7 +6,11 @@ body {
 header {
   background-color: #F0F0F0;
   padding: 20px;
-}
+  display: flex;
+  flex-direction: row;
+ 
+
+} 
 
 .logo {
   width: 140px;
@@ -20,6 +24,12 @@ ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  /* width: 250px; */
+  justify-content: center;
+  text-align: center;
 }
 
 li {

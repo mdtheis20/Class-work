@@ -6,6 +6,10 @@ body {
 }
 
 .container {
+  display: flex;
+ 
+  flex-direction: row;
+  justify-content:  space-evenly;
   background-color: #F0F0F0;
 }
 

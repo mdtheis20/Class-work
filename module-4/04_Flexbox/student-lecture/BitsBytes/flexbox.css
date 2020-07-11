@@ -1,0 +1,42 @@
+/**Style the page banner "footer"section **/
+/* #hero > footer :first-child {
+    color: red; we did this to target Bits and Bytes text
+} */
+#hero > footer {
+    /**make it a flex **/
+    display: flex;
+
+    /**move items apart with justify **/
+
+    justify-content: space-between;
+
+    /* center them vertically */
+    align-items: center;
+}
+
+/*style the featured item section */ 
+
+#featured > section {
+    display: flex;
+}
+
+#featured > section > article > div {
+    display: flex;
+    justify-content: center;
+}
+
+/* style the all items section */
+
+#all-items > section {
+    display: flex;
+    flex-direction: column;
+}
+#all-items > section > article {
+    display: flex;
+}
+
+#all-items > section> article:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+

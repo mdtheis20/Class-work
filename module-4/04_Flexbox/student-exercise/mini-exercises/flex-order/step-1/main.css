@@ -9,12 +9,26 @@ body {
   padding: 20px;
   margin-bottom: 20px;
   border: solid 1px #555;
+  display: flex;
 }
 
 .bio img {
+
   width: 150px;
   border-radius: 999px;
   margin: 0 10px;
+  
 }
 
-.bio:nth-child(2) img {}
+.bio:nth-child(2) img {
+  order: 2;
+}
+
+/* body > .bio:nth-child(odd) img {
+  justify-content: right;
+}
+
+body > .bio:nth-child(even) img {
+  justify-content: left;
+} */
+
