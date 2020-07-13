@@ -34,9 +34,10 @@ section {
   padding: 5px;
   /* Width (or flex-basis) must be set, else the section will take up the entire row, as it is a block element */
   /* Sets the default Width of the items, but they will expand with more content */
-  flex-basis: 300px;
+  /* flex-basis: 300px; */
   /* Allows all items to grow evenly (horizontally) to fill the space.*/
-  flex-grow: 1;
+  flex-grow: 0;
+  width: 100vw;
 }
 
 
@@ -47,4 +48,5 @@ body > section:nth-child(odd){
 
 body > section:nth-child(even){
   background-color: var(--color2);
+  /* flex-grow: 2; */
 }
