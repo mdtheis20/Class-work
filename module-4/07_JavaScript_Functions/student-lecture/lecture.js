@@ -7,15 +7,15 @@ function arrayFunctions()
     let phrase1 = "When in the course of human events it becomes necessary for one people to dissolve the political bands";
     // split here...
 
-    let words;
+    let words = phrase1.split(' ');
     // call printArray here...
-    
+    printArray(words);
 
     // array.slice gets a "sub-array" but does not modify the original
     // array.slice(startElement, nonInclusiveEndElement)
     console.log('*** ***\r\narray.slice gets a "sub-array" but does not modify the original' );
     // slice here...
-    let arr;
+    let arr = words.slice(3, 7)
     printArray(arr);
     printArray(words);
     
@@ -24,6 +24,7 @@ function arrayFunctions()
     // array.splice(start, count, newelements…)
     console.log('*** ***\r\narray.splice gets a "sub-array" and removes those elements.' );
     // splice here...
+    arr = words.splice(3, 4, "middle", "of", "the", "night")
     printArray(arr);
     printArray(words);
 
@@ -32,7 +33,7 @@ function arrayFunctions()
     // array.concat joins two arrays, and does not modify either.
     console.log('*** ***\r\narray.concat joins two arrays, and does not modify either.' );
     // concat here...
-    let bigArray;
+    let bigArray = words.concat(arr);
     printArray(words);
     printArray(arr);
     printArray(bigArray);
@@ -60,7 +61,9 @@ function printArray(arr){
  * @param {number} firstParameter the first parameter to multiply
  * @param {number} secondParameter the second parameter to multiply
  */
-
+function multiplyTogether(n1 = 0, n2  = 1){
+  return n1 * n2;
+}
 /**
  * This version makes sure that no parameters are ever missing. If
  * someone calls this function without parameters, we default the
@@ -76,7 +79,18 @@ function printArray(arr){
 /**
  * How can I write the multiply function so that it will multiply any number of parameters?
  */
-
+function multiply(){
+  if (arguments.length === 0){
+    return 0;
+  }
+  let product = 1;
+  for( let arg of arguments){
+    if (typeof(arg) === "number"){
+    product *= arg;
+    }
+  }
+  return product;
+}
 
 // How can we change this so that it can add up zero to three numbers?
 
@@ -116,48 +130,64 @@ function doubleIt(n){
  * There is actually a "variable" called doubleIt now
  */
 // print it...
-
+console.log('doubleIt is type ${typeof(doubleIt)}')
+console.log(doubleIt.name)
 
 
 /************************
  * Now that the function is defined, we can actually "assign" that function to 
  * another variable.
  */
+let func = doubleIt;
+console.log('func is type ${typeof(func)}')
+console.log(func.name)
 
 
 // Call the function doubleIt
 
-
+let x = doubleIt(12);
 
 // Call the function f
 
+x = func(35);
+console.log(x);
 
 
 /*****************************
  * Another way to define a function - assign it to a variable directly
  * 
  */
-
+let tripleIt = function (n) {
+  return n * 3;
+}
 
 
 /*******************************
  * And finally, a shortcut for the above using lambda (fat arrow)
  * 
  */
-
+let quadrupleIt = (n) => {
+  n * 4;
+}
 
 /************************************
  * You may even see a shorter-cut, called an expression-bodied function
  * but I won't use it normally
  */
 
-
+let quintupleIt = (n) => n * 5;
  
 /************************************
  * Now we can write a function, which takes another function as a parameter.
  * The passed-in function can be called (executed / invoked).
  */
-function toAllElements(array, functionToApply){
+function toAllElements(arr, functionToApply){
+  let outArray = [];
+  for (let i =  0; i < arr.length; i++) {
+    let newValue = functionToApply(arr[i]);
+    outArray.push(newValue)
+  }
+  return outArray;
 
 }
 
