@@ -65,24 +65,61 @@ function displayReview(review) {
 
 // TODO 01: Add an event listener for DOMContentLoaded and call the methods below only once that event occurs. We are going to hook up more event handlers,
 // so let's clean it up by creating an initializePage function to do all our setup stuff.
+document.addEventListener('DOMContentLoaded', initializePage);
+
+function initializePage() {
+  setPageTitle();
+  // set the product reviews page description
+  setPageDescription();
+  // display all of the product reviews on our page
+  displayReviews();
 
 
 // set the product reviews page title
-setPageTitle();
-// set the product reviews page description
-setPageDescription();
-// display all of the product reviews on our page
-displayReviews();
+
 
 // TODO 02: Allow the user to update the Description
 // TODO 02a: Handle 'click' on the description, and show the edit box, while hiding the p with the description in it
 // TODO 02b: Handle the keyup event to determine when the user is done editting. If the user pressed Enter, save the desc. If they pressed Esc, quit without saving
 //            For all other keys, let the event bubble up.
 // TODO 02c: Also handle the blur event on the textbox, which does the same as Esc (quit without saving).
+const desc = document.querySelector('p.description');
+desc.addEventListener('click', (ev) => {
+  toggleDescriptionEdit(ev.target);
+});
+
+const inputDesc = document.getElementById('inputDesc');
+//Handle keyup and check for Enter of esc
+
+inputDesc.addEventListener('keyup', (ev) =>{
+  if (ev.key === 'Enter'){
+    //save the result in description field
+    exitDescriptionEdit(inputDesc, true);
+  }
+  if (ev.key === 'Escape'){
+    //Exit without saving
+    exitDescriptionEdit(inputDesc, false);
+  }
+});
+
+inputDesc.addEventListener('blur', (ev) =>{
+  exitDescriptionEdit(inputDesc,false);
+});
 
 // TODO 03: Allow the user to add a new Review
 // TODO 03a: Handle the click event of the Add Review button. Show the form (call showHideForm())
+const addReviewButton = document.getElementById('btnToggleForm');
+addReviewButton.addEventListener('click', (ev) =>{
+  showHideForm();
+
+});
 // TODO 03c: Handle the click event of the Save Review button, and call saveReview().
+  const saveReviewButton = document.getElementById('btnSaveReview');
+  saveReviewButton.addEventListener('click', (ev) =>{
+    ev.preventDefault();
+    saveReview();
+  })
+}
 
 /**
  * Take an event on the description and swap out the description for a text box.
@@ -129,7 +166,20 @@ function showHideForm() {
       * Hide the form
       * Set the button text back to 'Add Review'
   */
+  const form = document.querySelector('form');
+  if (form.classList.contains('d-none')){
+    //the form is currently hidden.....show it
+    form.classList.remove('d-none');
+    document.getElementById('btnToggleForm').innerText = 'Cancel';
+    document.getElementById('name').focus();
 
+  }
+  else{ 
+    //the form is currently showing.....hide it
+    form.classList.add('d-none');
+    document.getElementById('btnToggleForm').innerText = 'Add Review';
+    resetFormValues();
+  }
 }
 
 /**
@@ -158,6 +208,15 @@ function saveReview() {
 * Call displayReview, passing in the new review
 * Hide the form (call showHideForm)
 */
-
+let newReview = 
+{
+  reviewer: document.getElementById('name').value,
+  title: document.getElementById('title').value,
+  review: document.getElementById('review').value,
+  rating: document.getElementById('rating').value,
+}
+reviews.unshift(newReview);
+displayReviews();
+showHideForm();
 
 }
