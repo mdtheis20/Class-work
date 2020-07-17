@@ -29,11 +29,17 @@ function displayGroceries() {
  * to every list item and add the class completed to each one
  */
 function markCompleted() {
-  let grocery = document.getElementById('groceries');
-  groceries.forEach( groc => {
-    let grocContainer = document.createElement('div');
-    grocContainer.classList.add('completed');
-  })
+const lis = document.querySelectorAll('#groceries > li');
+
+lis.forEach((groceryItem) => {
+  groceryItem.classList.add('completed');
+});
+
+  // let grocery = document.getElementById('groceries');
+  // groceries.forEach( groc => {
+  //   let grocContainer = document.createElement('div');
+  //   grocContainer.classList.add('completed');
+  // })
 
   }
 
