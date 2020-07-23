@@ -1,0 +1,81 @@
+<!-- ********************** HTML for ReviewDisplay template ********************** -->
+  <div class="review">
+    <h4>{{review.reviewer}}</h4>
+    <div class="rating">
+      <img src="../assets/star.png" class="ratingStar" v-for="i in review.rating" v-bind:key="i" />
+    </div>
+    <h3>{{review.title}}</h3>
+    <p>{{review.review}}</p>
+  </div>  
+  <!-- ********************** HTML for ReviewDisplay template ********************** -->
+
+/*************** Styles for ReviewDisplay **************************/
+div.review {
+  border: 1px black solid;
+  border-radius: 6px;
+  padding: 1rem;
+  margin: 10px;
+}
+
+div.review div.rating {
+  height: 2rem;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 0.5rem;
+}
+
+div.review div.rating img {
+  height: 100%;
+}
+
+div.review p {
+  margin: 20px;
+}
+
+div.review h3 {
+  display: inline-block;
+}
+
+div.review h4 {
+  font-size: 1rem;
+}
+/*************** Styles for ReviewDisplay **************************/
+
+//*************** Dummy data for ReviewDisplay *********************/
+      review: {
+        id: 6,
+        reviewer: "Max",
+        title: "Dummy",
+        review: "The writer needs to read a 'writing for dummies' book.",
+        rating: 1,
+        favorite: false,
+      },
+//*************** Dummy data for ReviewDisplay *********************/
+
+
+
+
+<!-- ********************** HTML for ReviewSummary template ********************** -->
+  <div>
+      <p>Average rating is <strong>{{averageRating}}</strong> from <strong>{{count}}</strong> reviews</p>
+  </div>
+<!-- ********************** HTML for ReviewSummary template ********************** -->
+
+/*************** Styles for ReviewSummary **************************/
+    p {
+        border: 1px solid blue;
+        border-radius: 5px;
+    }
+/*************** Styles for ReviewSummary **************************/
+
+//************************** Computed properties for ReviewSummary ****************************/
+    computed: {
+        count(){
+            return this.reviews.length;
+        },
+        averageRating(){
+            let sum = this.reviews.reduce( (accum, review) => review.rating + accum, 0);
+            return (sum / this.reviews.length).toFixed(2);
+        }
+    },
+//************************** Computed properties for ReviewSummary ****************************/
