@@ -1,6 +1,7 @@
 <template>
   <div id="app" class="main">
     <!-- TODO: Add the router-view to display the current view -->
+    <router-view />
   </div>
 </template>
 
@@ -16,7 +17,7 @@
  * Tasks
  *  1. Create a Products view which will be our home page (Products.vue)
  *      - Add a heading and the ProductsList component (ProductsList.vue)
- *      - Add it as the default route (/) (index.js)
+ *      - Add it as the default route (/) (index.js)      COMPLETED THIS TASK BY 10:00 AM
  *      - Add the router-view (app.vue)
  * 2.  Create a ProductDetail view which displays a detailed view of the product (basically
  *      our reviews page from previous days)

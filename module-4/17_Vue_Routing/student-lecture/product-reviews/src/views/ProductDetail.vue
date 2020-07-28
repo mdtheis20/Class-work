@@ -6,8 +6,8 @@
     <h1>{{ product.name }}</h1>
     <p class="description">{{ product.description }}</p>
     <div class="actions">
-      <a href="#">Back to Products</a>&nbsp;|
-      <a href="#">Add Review</a>
+      <router-link :to="{name: 'products'}" >Back to Products</router-link> &nbsp;|
+      <router-link :to="{name: 'add-review', params: {id: productId}}">Add Review</router-link>
     </div>
     <div class="well-display">
       <average-summary :productId="productId" />
@@ -40,7 +40,7 @@
     return {
       productId: 0
     }
-  }
+  },
 
     computed: {
         // TODO: Define a computed product object which looks up the appropriate product from the store
@@ -57,7 +57,9 @@
     code inside the method is executed each time a new instance of ProductDetail 
     is created.
     */
-
+   created(){
+       this.productId = parseInt(this.$route.params.id);
+   }
     // TODO: Set the product id we are interested in 
   };
 </script>
