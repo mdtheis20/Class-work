@@ -7,12 +7,18 @@
 </template>
 
 <script>
+import api from '@/services/apiService.js'
 export default {
   name: 'topic-list',
   data() {
     return {
       topics: []
     }
+  },
+  created(){
+    api.getTopics().then( resp => {
+      this.topics = resp.data;
+    });
   }
 }
 </script>

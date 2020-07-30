@@ -76,7 +76,15 @@ function fetchParkData() {
 
     // TODO: Send an HTTP GET request to the nps parks api (npsURL)
 
-
+    axios.get(npsURL).then(resp => {
+        logIt("fetch 2");
+        const parks = resp.data;
+        if (parks.data.length > 0) {
+            const park = parks.data[0];
+            document.getElementById('results').innerText = park.description;
+            addImages(park.images);
+        }
+    });
 
 
     logIt('fetchParkData 3');
